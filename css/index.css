@@ -75,16 +75,17 @@ h1, h2, h3, h4, h5 {
 
 .flex-container {
 	display:flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .flex-container.flex-all-center {
-	justify-content: center;
+	//justify-content: space-evenly;
 	align-items: center;
 }
 
 [class ^= "col-"], [class *= "col-"] {
-	margin-bottom: 2.5em;
+    margin: 0 0.5em 2.5em;
 }
 
 .col-full {
@@ -92,11 +93,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-half {
-	width: calc(100% / 2);
+	width: calc(100% / 2 - 1em);
 }
 
 .col-third {
-	width: calc(100% / 3);
+	width: calc(100% / 3 - 1em);
 }
 
 /* actual styling begins */
@@ -122,22 +123,26 @@ a.button:hover {
 /* header and navigation */
 
 header {
-	background: var(--gray);
-	left: 0;
+	//background: var(--gray);
+	//left: 0;
 	padding: 2.5em 0;
-	position: fixed;
-	right: 0;
-	top: 0;
+	//position: fixed;
+	//right: 0;
+	//top: 0;
+}
+
+nav {
+    width: calc(100% - 183px);
 }
 
 nav a {
-	color: black;
-	margin-right: 3.5em;
+	color: var(--gray);
+	//margin-right: 3.5em;
 	text-decoration: none;
 }
 
 nav a:hover {
-	font-weight: bold;
+	color: black;
 }
 
 /* banner */
@@ -150,8 +155,8 @@ nav a:hover {
 #services-top {
 	border-bottom: solid 1px black;
 	margin-bottom: 2.5em;
-	padding-bottom: 2.5em;
-	padding-top: calc(117px + 2.5em);
+    padding: 2.5em 0;
+	//padding-top: calc(117px + 2.5em);
 }
 
 /* footer */
@@ -217,4 +222,55 @@ body#services h1 {
 
 #services-bottom #services-info-img {
 	padding: 0;
+}
+
+/* background images instead of image tags where needed */
+.index-mid-page-accent {
+    background: url('../img/mid-page-accent.jpg') no-repeat center;
+    background-size: cover;
+    width: 876px;
+    height: 182px;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 800px) {
+    header {
+        flex-direction: column-reverse;
+    }
+    nav {
+        margin-top: 2.5em;
+        width: 100%;
+    }
+    #banner-left {
+        width: 100%;
+    }
+    #banner-right {
+        display: none;
+    }
+    .index-mid-page-accent {
+        max-width: calc(800px - 1em);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    [class ^= "col-"], [class *= "col-"] {
+        width: 100%;
+    }
+    header {
+        padding: 1em 0;
+    }
+    nav {
+        border-bottom: solid 1px var(--gray);
+        margin-top: 1em;
+    }
+    nav a {
+        padding: 1em 0;
+        border-top: solid 1px var(--gray);
+        text-align: center;
+        width: 100%;
+    }
+    .index-mid-page-accent {
+        max-width: calc(500px - 1em);
+    }
 }

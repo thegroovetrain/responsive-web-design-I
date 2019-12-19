@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
   <title>Great Idea - Responsive I</title>
 
   <link href="https://fonts.googleapis.com/css?family=Bangers|Titillium+Web" rel="stylesheet">
@@ -30,10 +32,10 @@
         Demand</h1>
 
         <a class="button" href="#get-started">Get Started</a>
-      </div><!--banner-left-->
+      </div>
       <div id="banner-right" class="col-half">
         <img src="img/header-img.png" alt="Image of a code snippet.">
-      </div><!--banner-right-->
+      </div>
     </section><!--banner-->
     <div class="flex-container flex-all-center">
 
@@ -48,7 +50,8 @@
       </section>
 
       <section id="index-mid-page-accent" class="col-full">
-        <img class="middle-img" src="img/mid-page-accent.jpg" alt="Image of code snippets across the screen">
+        <div class="index-mid-page-accent"></div>
+        <!---<img class="middle-img" src="img/mid-page-accent.jpg" alt="Image of code snippets across the screen">-->
       </section>
 
       <section id="index-services" class="col-third">
@@ -69,16 +72,19 @@
     </div><!--flex-container-->
   </main>
   
-  <section id="footer-contact">
-    <h2>Contact</h2>
-    <address>
-      123 Way 456 Street<br>
-      Somewhere, USA<br>
-      <br>
-      1 (888) 888-8888<br>
-      <br>
-      sales@greatidea.io
-    </address>
+  <section id="footer-contact" class="flex-container">
+    <div class='col-full'>
+      <h2>Contact</h2>
+      <address>
+
+        123 Way 456 Street<br>
+        Somewhere, USA<br>
+        <br>
+        1 (888) 888-8888<br>
+        <br>
+        sales@greatidea.io
+      </address>
+    </div>
   </section>
   <footer>
     <div class="flex-container">
