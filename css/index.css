@@ -80,7 +80,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .flex-container.flex-all-center {
-	//justify-content: space-evenly;
 	align-items: center;
 }
 
@@ -123,12 +122,7 @@ a.button:hover {
 /* header and navigation */
 
 header {
-	//background: var(--gray);
-	//left: 0;
 	padding: 2.5em 0;
-	//position: fixed;
-	//right: 0;
-	//top: 0;
 }
 
 nav {
@@ -137,7 +131,6 @@ nav {
 
 nav a {
 	color: var(--gray);
-	//margin-right: 3.5em;
 	text-decoration: none;
 }
 
@@ -156,7 +149,6 @@ nav a:hover {
 	border-bottom: solid 1px black;
 	margin-bottom: 2.5em;
     padding: 2.5em 0;
-	//padding-top: calc(117px + 2.5em);
 }
 
 /* footer */
